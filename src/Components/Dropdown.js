@@ -3,30 +3,7 @@ import axios from 'axios';
 
 const Dropdown = () => {
 
-  // const superheroIds = [18, 30, 35, 38];
-
   const [superheroData, setSuperheroData] = useState([]);
-
-  // const getAllSuperheroes = (idArr) => {
-  //   return Promise.all(idArr.map(id => {
-  //     return axios({
-  //       method: 'GET',
-  //       url: 'https://proxy.hackeryou.com',
-  //       responseType: 'json',
-  //       params: {
-  //         reqUrl: `https://superheroapi.com/api/2827401063977440/${id}`,
-  //         proxyHeaders: {
-  //           'header_params': 'value'
-  //         },
-  //         xmlToJSON: false,
-  //       }
-  //     }).then(response => {
-  //       console.log(response.data);
-  //     })
-  //   }))
-  // }
-
-  
 
   useEffect(() => {
     const superheroIds = [18, 30, 35, 38];
@@ -47,18 +24,17 @@ const Dropdown = () => {
         })
       })).then(response => {
         const objectArray = [];
-        response.map(res => {
+        response.forEach(res => {
           objectArray.push(res.data);
-          // return objectArray;
-          setSuperheroData(objectArray);
         })
+        setSuperheroData(objectArray);
         
       })
     }
-    const whatisthis = getAllSuperheroes(superheroIds);
-    console.log(whatisthis);
+    getAllSuperheroes(superheroIds);
 
-  }, [setSuperheroData]); 
+  }, []); 
+
 
   return (
     <form action="">
