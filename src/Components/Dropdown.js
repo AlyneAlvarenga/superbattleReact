@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Dropdown = () => {
 
-  const superheroIds = [18, 30, 35, 38];
+  // const superheroIds = [18, 30, 35, 38];
 
   const [superheroData, setSuperheroData] = useState([]);
 
@@ -29,8 +29,10 @@ const Dropdown = () => {
   
 
   useEffect(() => {
+    const superheroIds = [18, 30, 35, 38];
+
     const getAllSuperheroes = (idArr) => {
-      return idArr.map(id => {
+      return Promise.all(idArr.map(id => {
         return axios({
           method: 'GET',
           url: 'https://proxy.hackeryou.com',
@@ -43,23 +45,27 @@ const Dropdown = () => {
             xmlToJSON: false,
           }
         })
+      })).then(response => {
+        const objectArray = [];
+        response.map(res => {
+          objectArray.push(res.data);
+          // return objectArray;
+          setSuperheroData(objectArray);
+        })
+        
       })
     }
+    const whatisthis = getAllSuperheroes(superheroIds);
+    console.log(whatisthis);
 
-    const promises = getAllSuperheroes(superheroIds);
-    const objects = Promise.allSettled(promises).then(res => res.data);
-    console.log(objects);
-    
-    // setSuperheroData(objects);
-
-  }, [superheroIds]); 
+  }, [setSuperheroData]); 
 
   return (
     <form action="">
       <select name="" id="">
         {
-          superheroIds.map(id => {
-            return <option value={id}>{id}</option>
+          superheroData.map(obj => {
+            return <option key={obj.id} value={obj.id}>{obj.name}</option>
           })
         }
       </select>
