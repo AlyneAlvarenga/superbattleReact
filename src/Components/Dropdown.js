@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Select from './Select';
+
 
 const Dropdown = () => {
 
@@ -35,16 +37,22 @@ const Dropdown = () => {
 
   }, []); 
 
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    
+  }
 
   return (
     <form action="">
-      <select name="" id="">
+      <Select superheroData={superheroData} handleChange={handleChange} />
+      <Select superheroData={superheroData} handleChange={handleChange} />
+      {/* <select name="" id="">
         {
           superheroData.map(obj => {
             return <option key={obj.id} value={obj.id}>{obj.name}</option>
           })
         }
-      </select>
+      </select> */}
     </form>
   )
 }
