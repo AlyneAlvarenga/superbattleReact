@@ -6,6 +6,10 @@ import Select from './Select';
 const Dropdown = () => {
 
   const [superheroData, setSuperheroData] = useState([]);
+  const [superhero1, setSuperhero1] = useState('');
+  const [superhero2, setSuperhero2] = useState('');
+  const [disableSuperhero1, setDisableSuperhero1] = useState(false);
+  const [disableSuperhero2, setDisableSuperhero2] = useState(false);
 
   useEffect(() => {
     const superheroIds = [18, 30, 35, 38];
@@ -39,20 +43,26 @@ const Dropdown = () => {
 
   const handleChange = (event) => {
     console.log(event.target.value);
+
+    const chosenHero = [];
+
+    superheroData.find(obj => {
+      return obj.id === event.target.value ? chosenHero.push(obj) : null
+    })
     
+    if (superhero1 === '') {
+      setSuperhero1(chosenHero);
+      setDisableSuperhero1(true);
+    } else {
+      setSuperhero2(chosenHero);
+      setDisableSuperhero2(true);
+    }
   }
 
   return (
     <form action="">
-      <Select superheroData={superheroData} handleChange={handleChange} />
-      <Select superheroData={superheroData} handleChange={handleChange} />
-      {/* <select name="" id="">
-        {
-          superheroData.map(obj => {
-            return <option key={obj.id} value={obj.id}>{obj.name}</option>
-          })
-        }
-      </select> */}
+      <Select superheroData={superheroData} handleChange={handleChange} disabled={disableSuperhero1} />
+      <Select superheroData={superheroData} handleChange={handleChange} disabled={disableSuperhero2} />
     </form>
   )
 }
