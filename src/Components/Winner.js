@@ -1,23 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
-  // const [percentages, setPercentages] = useState([]);
-
-  // const drawCircles = (num1, num2) => {
-  //   const percentageHero1 = (num1 * 283 / 100).toFixed(0);
-  //   const percentageHero2 = (num2 * 283 / 100).toFixed(0);
-
-  //   setPercentages([percentageHero1, percentageHero2]);
-  // }
 
   const whoIsWinner = () => {
-    // const hero1 = superhero1[0].powerstats[chosenBattle];
-    // const hero1Int = parseInt(hero1);
-
-    // const hero2 = superhero2[0].powerstats[chosenBattle];
-    // const hero2Int = parseInt(hero2);
-
-
     if (percentages[0] > percentages[1]) {
       return superhero1[0].name;
     } else if (percentages[0] < percentages[1]) {
@@ -26,7 +11,6 @@ const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
       return `Both! It's a tie!`;
     }
   }
-  // { whoIsWinner() === superhero1[0].name ? null : 'grayscale' }
 
   return (
     <section>
@@ -46,7 +30,7 @@ const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
                   a 45,45 0 1,0 -90,0"></path>
             </g>
           </svg>
-          <span class="circleLabel circleLabelHero1">{`${percentages[0]}%`}</span>
+          <span className="circleLabel circleLabelHero1">{`${superhero1[0].powerstats[chosenBattle]}%`}</span>
         </div>
       </div>
       <div className="Winner-resultContainer">
@@ -64,7 +48,7 @@ const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
                   a 45,45 0 1,0 -90,0"></path>
             </g>
           </svg>
-          <span class="circleLabel circleLabelHero2">{`${percentages[1]}%`}</span>
+          <span className="circleLabel circleLabelHero2">{`${superhero2[0].powerstats[chosenBattle]}%`}</span>
         </div>
       </div>
     </section>

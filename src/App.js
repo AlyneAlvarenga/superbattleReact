@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './Components/Header';
@@ -18,7 +18,7 @@ function App() {
   const [percentages, setPercentages] = useState([]);
 
   useEffect(() => {
-    const superheroIds = [18, 30, 35, 38];
+    const superheroIds = [18, 30, 35, 38, 61, 69];
 
     const getAllSuperheroes = (idArr) => {
       return Promise.all(idArr.map(id => {
@@ -72,17 +72,12 @@ function App() {
 
     const getPercentages = () => {
       const hero1 = parseInt(superhero1[0].powerstats[chosenBattle]);
-      console.log(hero1);
-      
-
+    
       const hero2 = parseInt(superhero2[0].powerstats[chosenBattle]);
-      console.log(hero2);
-      
 
       const percentageHero1 = hero1 * 283 / 100;
       const percentageHero2 = hero2 * 283 / 100;
-
-      console.log(hero1, percentageHero1);
+  
       setPercentages([percentageHero1, percentageHero2]);
     }
 
