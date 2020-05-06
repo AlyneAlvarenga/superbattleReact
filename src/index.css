@@ -7,10 +7,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+  margin: 0;
+  color: white;
 }
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 14px 14px 5px 0 white;
+}
+
+.imgContainer {
+  width: 250px;
+  margin: 10px 0 35px;
+  /* align-self: start; */
+}
+
+/* drawing the circles */
+.Winner-circleContainer {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+/* drawing labels inside the circles */
+.circleLabel {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+/* making it so we can see the inside of the circle */
+.svgGroup {
+  fill: none;
+  stroke: none;
+}
+
+/* the circle that represents 100% */
+.baseCircle {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+/* this will represent the percentage of the powerstat */
+.secondCircleHero1, .secondCircleHero2 {
+  stroke: white;
+  stroke-width: 7px;
+  stroke-linecap: round;
+}
+
 
 .grayscale {
   filter: grayscale(100%);
