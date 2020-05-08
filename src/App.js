@@ -88,7 +88,7 @@ function App() {
   }, [chosenBattle, superhero1, superhero2])
 
   return (
-    <main className="App">
+    <main>
       <Header />
       {
         !displayResults ?
