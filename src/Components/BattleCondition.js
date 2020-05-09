@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const BattleCondition = ({handleChange}) => {
   const styles = {
-    width: "250px",
+    width: "230px",
     fontSize: "1.6rem",
     color: "white",
     fontWeight: "bold"
@@ -29,9 +29,6 @@ const BattleCondition = ({handleChange}) => {
         borderBottom: `2px solid yellow`
       }
     },
-    selectMenu: {
-      backgroundColor: "black"
-    },
     icon: {
       fill: "white"
     },
@@ -41,7 +38,9 @@ const BattleCondition = ({handleChange}) => {
 
   return (
     <FormControl variant="filled" >
-      <NativeSelect style={styles} name="" id="" onChange={handleChange} className={classes.select}>
+      <NativeSelect style={styles} name="" id="" onChange={handleChange} className={classes.select} classes={{
+        icon: classes.icon
+      }}>
         <option value="">Battle Condition</option>
         <option value="intelligence">Battle of Intelligence</option>
         <option value="speed">Battle of Speed</option>
