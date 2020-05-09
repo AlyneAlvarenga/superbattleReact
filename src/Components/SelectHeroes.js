@@ -4,12 +4,14 @@ import { FormControl } from '@material-ui/core';
 
 const SelectHeroes = (props) => {
   const styles = {
-    width: "200px",
-    fontSize: "1.5rem"
+    width: "250px",
+    fontSize: "1.6rem",
+    color: "white",
+    fontWeight: "bold"
   }
   return (
     <FormControl variant="outlined">
-      <NativeSelect inputProps={{style: styles}} style={styles} name="" onChange={props.handleChange} disabled={ props.disabled ? true : null }>
+      <NativeSelect style={styles} name="" onChange={props.handleChange} disabled={ props.disabled ? true : null }>
           <option value="">Choose Your Champion</option>
         {
           props.superheroData.map(obj => {

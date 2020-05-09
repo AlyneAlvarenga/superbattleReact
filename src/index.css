@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +13,17 @@ html {
   font-size: 62.5%;
   line-height: 1.6;
   margin: 0;
-  /* color: white; */
+  color: white;
+}
+
+h1 {
+  font-family: 'Nosifer', cursive;
+  font-size: 4.5rem;
+  margin: 0;
+}
+
+option {
+  color: black;
 }
 
 img {
@@ -34,8 +46,14 @@ img {
   position: relative;
 }
 
+/* making it so we can see the inside of the circle */
+.Winner-svgGroup {
+  fill: none;
+  stroke: none;
+}
+
 /* drawing labels inside the circles */
-.circleLabel {
+.Winner-circleLabel {
   position: absolute;
   width: 150px;
   height: 150px;
@@ -46,26 +64,20 @@ img {
   font-size: 2.5rem;
 }
 
-/* making it so we can see the inside of the circle */
-.svgGroup {
-  fill: none;
-  stroke: none;
-}
-
 /* the circle that represents 100% */
-.baseCircle {
+.Winner-baseCircle {
   stroke-width: 7px;
   stroke: grey;
 }
 
 /* this will represent the percentage of the powerstat */
-.secondCircleHero1, .secondCircleHero2 {
+.Winner-secondCircle {
   stroke: white;
   stroke-width: 7px;
   stroke-linecap: round;
 }
 
 
-.grayscale {
+.Winner-grayscale {
   filter: grayscale(100%);
 }
