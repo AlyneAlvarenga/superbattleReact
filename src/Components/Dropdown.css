@@ -1,0 +1,16 @@
+.Dropdown-heroesContainer {
+  min-height: 67vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Dropdown-battleContainer {
+  align-self: center;
+  transform: translateY(-8rem);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}

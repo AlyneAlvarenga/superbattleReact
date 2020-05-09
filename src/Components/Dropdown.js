@@ -1,15 +1,20 @@
 import React from 'react';
 import SelectHeroes from './SelectHeroes';
 import BattleCondition from './BattleCondition';
+import './Dropdown.css';
 
 
 const Dropdown = ({ superheroData, handleSuperheroChange, disableSuperhero1, disableSuperhero2, handleBattleChange, chosenBattle }) => {
 
   return (
     <form action="">
-      <SelectHeroes superheroData={superheroData} handleChange={handleSuperheroChange} disabled={disableSuperhero1} />
-      <SelectHeroes superheroData={superheroData} handleChange={handleSuperheroChange} disabled={disableSuperhero2} />
-      <BattleCondition handleChange={handleBattleChange} chosenBattle={chosenBattle} />
+      <div className="Dropdown-heroesContainer">
+        <SelectHeroes superheroData={superheroData} handleChange={handleSuperheroChange} disabled={disableSuperhero1} />
+        <SelectHeroes superheroData={superheroData} handleChange={handleSuperheroChange} disabled={disableSuperhero2} />
+      </div>
+      <div className="Dropdown-battleContainer">
+        <BattleCondition handleChange={handleBattleChange} chosenBattle={chosenBattle} />
+      </div>
     </form>
   )
 }
