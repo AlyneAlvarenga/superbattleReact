@@ -1,4 +1,5 @@
 import React from 'react';
+import './Winner.css';
 
 const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
 
