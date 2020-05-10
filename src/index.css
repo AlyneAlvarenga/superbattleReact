@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
 body {
   margin: 0;
@@ -16,16 +17,33 @@ html {
   color: white;
 }
 
+h1, h2, h3 {
+  text-align: center;
+}
+
 h1 {
   font-family: 'Nosifer', cursive;
   font-size: 5rem;
   margin: 0;
-  text-align: center;
   padding-top: 4rem;
 }
 
 h2 {
   font-size: 3rem;
+}
+
+h3, .Winner-fontSpan {
+  font-family: 'Metal Mania', cursive;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.Winner-fontSpan {
+  border-bottom: 1px solid gold;
 }
 
 option {
@@ -36,54 +54,6 @@ img {
   display: block;
   width: 100%;
   border-radius: 2rem;
-  box-shadow: 14px 14px 5px 0 white;
-}
-
-.Winner-imgContainer {
-  width: 250px;
-  margin: 10px 0 35px;
-  /* align-self: start; */
-}
-
-/* drawing the circles */
-.Winner-circleContainer {
-  width: 150px;
-  height: 150px;
-  position: relative;
-}
-
-/* making it so we can see the inside of the circle */
-.Winner-svgGroup {
-  fill: none;
-  stroke: none;
-}
-
-/* drawing labels inside the circles */
-.Winner-circleLabel {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
-
-/* the circle that represents 100% */
-.Winner-baseCircle {
-  stroke-width: 7px;
-  stroke: grey;
-}
-
-/* this will represent the percentage of the powerstat */
-.Winner-secondCircle {
-  stroke: white;
-  stroke-width: 7px;
-  stroke-linecap: round;
-}
-
-
-.Winner-grayscale {
-  filter: grayscale(100%);
+  /* box-shadow: 14px 14px 5px 0 white; */
+  box-shadow: 1px 2px 8px 11px white;
 }

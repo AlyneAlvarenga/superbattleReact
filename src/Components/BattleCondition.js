@@ -22,11 +22,11 @@ const BattleCondition = ({handleChange}) => {
       },
       "&:after": {
         // focused
-        borderBottom: `1px solid yellow`
+        borderBottom: `1px solid gold`
       },
       "&:hover:not(.Mui-disabled):not(.Mui-focused):not(.Mui-error):before": {
         // hover
-        borderBottom: `2px solid yellow`
+        borderBottom: `2px solid gold`
       }
     },
     icon: {
