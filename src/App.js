@@ -17,6 +17,7 @@ function App() {
 
   const [percentages, setPercentages] = useState([]);
 
+  // 30, 35, 38, 61, 69, 95, 106, 107, 127, 149, 157, 162, 176, 208, 213, 226, 275, 278, 289, 303, 313, 332, 346, 370, 374, 405, 410, 414, 418, 423, 487
   useEffect(() => {
     const superheroIds = [18, 30, 35, 38, 61, 69];
 
