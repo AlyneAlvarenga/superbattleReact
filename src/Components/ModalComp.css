@@ -1,0 +1,13 @@
+.ModalComp-modalBody {
+  background-color: black;
+  font-size: 1.8rem;
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 3rem 3rem 5rem;
+  border: 1px solid gold;
+  text-align: center;
+}
+
+.ModalComp-modalBody ol {
+  text-align: left;
+}

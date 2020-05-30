@@ -1,0 +1,15 @@
+header {
+  text-align: center;
+}
+
+.Header-main {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header-results {
+  min-height: 15vh;
+}

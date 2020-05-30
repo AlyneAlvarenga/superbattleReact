@@ -89,8 +89,10 @@ function App() {
   }, [chosenBattle, superhero1, superhero2])
 
   return (
-    <main>
-      <Header />
+    <div className="App-container">
+      <Header 
+        displayResults={displayResults}
+      />
       {
         !displayResults ?
           <Dropdown 
@@ -109,7 +111,7 @@ function App() {
             percentages={percentages}
           />
       }
-    </main>
+    </div>
   );
 }
 

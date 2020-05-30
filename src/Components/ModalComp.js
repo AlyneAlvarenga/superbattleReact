@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Modal } from '@material-ui/core';
+import './ModalComp.css';
 
 const ModalComp = () => {
   console.log('mounted');
@@ -15,24 +16,26 @@ const ModalComp = () => {
   }
 
   const modalBody = (
-    <div>
-      <h2>Text in a modal</h2>
-      <p>
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      <button onClick={handleClose}>Close</button>
+    <div className="ModalComp-modalBody">
+      <h2>Instructions</h2>
+      <ol>
+        <li>Select one champion from each list;</li>
+        <li>Select a condition of battle;</li>
+        <li>See who the winner is!</li>
+      </ol>
+      <button onClick={handleClose}>Close Instructions</button>
     </div>
   );
   
   return (
     <>
-    <button onClick={handleOpen}>See Instructions</button>
-    <Modal
-      open={open}
-      onClose={handleClose}
-    >
-      {modalBody}
-    </Modal>
+      <button onClick={handleOpen}>See Instructions</button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+      >
+        {modalBody}
+      </Modal>
     </>
   )
 }
