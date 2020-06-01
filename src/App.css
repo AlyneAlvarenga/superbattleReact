@@ -1,13 +1,13 @@
 .App-container {
   min-height: 100vh;
-  background-image: url('/versusBackground.jpg');
+  background-image: url('./images/versusBackground.jpg');
   background-size: cover;
   background-position: center;
 }
 
 @media (max-width: 770px) {
   .App-container {
-    background-image: url('/backgroundMobile.jpg');
+    background-image: url('./images/backgroundMobile.jpg');
     min-height: 1300px;
   }
 }
