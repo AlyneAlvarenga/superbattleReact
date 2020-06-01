@@ -58,3 +58,9 @@
 .Winner-grayscale {
   filter: grayscale(100%);
 }
+
+.Winner-resetContainer {
+  max-width: 11rem;
+  margin: 0 auto;
+  transform: translateY(-11rem);
+}

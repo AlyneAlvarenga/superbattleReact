@@ -71,3 +71,19 @@ img {
   border-radius: 2rem;
   box-shadow: 1px 2px 8px 11px white;
 }
+
+button {
+  padding: 1rem;
+  border-radius: 0.6rem;
+  border: 2px solid gold;
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+button:hover, button:focus {
+  border: 2px solid white;
+  border-radius: 2rem;
+}

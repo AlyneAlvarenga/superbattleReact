@@ -88,6 +88,17 @@ function App() {
 
   }, [chosenBattle, superhero1, superhero2])
 
+
+  const resetGame = () => {
+    setDisplayResults(false);
+    setSuperhero1('');
+    setSuperhero2('');
+    setDisableSuperhero1(false);
+    setDisableSuperhero2(false);
+    setChosenBattle('');
+    setPercentages([]);
+  }
+
   return (
     <div className="App-container">
       <Header 
@@ -109,6 +120,7 @@ function App() {
             superhero2={superhero2}
             chosenBattle={chosenBattle}
             percentages={percentages}
+            resetGame={resetGame}
           />
       }
     </div>

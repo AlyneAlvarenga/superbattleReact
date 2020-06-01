@@ -1,7 +1,7 @@
 import React from 'react';
 import './Winner.css';
 
-const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
+const Winner = ({superhero1, superhero2, chosenBattle, percentages, resetGame}) => {
 
   const whoIsWinner = () => {
     if (percentages[0] > percentages[1]) {
@@ -37,6 +37,7 @@ const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
             <span className="Winner-circleLabel">{`${superhero1[0].powerstats[chosenBattle]}%`}</span>
           </div>
         </div>
+        {/* ./heroContainer */}
         <div className="Winner-heroContainer">
           <h3>{superhero2[0].name}</h3>
           <div className="Winner-imgContainer">
@@ -55,9 +56,13 @@ const Winner = ({superhero1, superhero2, chosenBattle, percentages}) => {
             </svg>
             <span className="Winner-circleLabel">{`${superhero2[0].powerstats[chosenBattle]}%`}</span>
           </div>
-        </div>
+        </div> 
+        {/* /.heroContainer */}
       </div>
       {/* /.resultsContainer */}
+      <div className="Winner-resetContainer">
+        <button onClick={resetGame}>Try Again</button>
+      </div>
     </section>
   )
 }

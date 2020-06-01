@@ -3,7 +3,7 @@ header {
 }
 
 .Header-main {
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
