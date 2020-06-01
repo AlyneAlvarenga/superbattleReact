@@ -12,7 +12,8 @@ function App() {
   const [superhero1, setSuperhero1] = useState('');
   const [superhero2, setSuperhero2] = useState('');
   const [disableSuperhero1, setDisableSuperhero1] = useState(false);
-  const [disableSuperhero2, setDisableSuperhero2] = useState(false);
+  const [disableSuperhero2, setDisableSuperhero2] = useState(true);
+  const [disableBattle, setDisableBattle] = useState(true);
   const [chosenBattle, setChosenBattle] = useState('');
 
   const [percentages, setPercentages] = useState([]);
@@ -58,9 +59,11 @@ function App() {
     if (superhero1 === '') {
       setSuperhero1(chosenHero);
       setDisableSuperhero1(true);
+      setDisableSuperhero2(false);
     } else {
       setSuperhero2(chosenHero);
       setDisableSuperhero2(true);
+      setDisableBattle(false);
     }
   }
 
@@ -70,7 +73,6 @@ function App() {
   }
 
   useEffect(() => {
-
     const getPercentages = () => {
       const hero1 = parseInt(superhero1[0].powerstats[chosenBattle]);
     
@@ -94,7 +96,8 @@ function App() {
     setSuperhero1('');
     setSuperhero2('');
     setDisableSuperhero1(false);
-    setDisableSuperhero2(false);
+    setDisableSuperhero2(true);
+    setDisableBattle(true);
     setChosenBattle('');
     setPercentages([]);
   }
@@ -113,6 +116,7 @@ function App() {
             disableSuperhero2={disableSuperhero2}
             handleBattleChange={handleBattleChange}
             chosenBattle={chosenBattle}
+            disableBattle={disableBattle}
           />
           : 
           <Winner 

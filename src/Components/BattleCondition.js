@@ -3,7 +3,7 @@ import { NativeSelect } from '@material-ui/core';
 import { FormControl } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const BattleCondition = ({handleChange}) => {
+const BattleCondition = ({handleChange, disableBattle}) => {
   const styles = {
     width: "230px",
     fontSize: "1.6rem",
@@ -40,7 +40,7 @@ const BattleCondition = ({handleChange}) => {
     <FormControl variant="filled" >
       <NativeSelect style={styles} name="" id="" onChange={handleChange} className={classes.select} classes={{
         icon: classes.icon
-      }}>
+      }} disabled={disableBattle}>
         <option value="">Battle Condition</option>
         <option value="intelligence">Battle of Intelligence</option>
         <option value="speed">Battle of Speed</option>

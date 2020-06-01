@@ -4,7 +4,7 @@ import BattleCondition from './BattleCondition';
 import './Dropdown.css';
 
 
-const Dropdown = ({ superheroData, handleSuperheroChange, disableSuperhero1, disableSuperhero2, handleBattleChange, chosenBattle }) => {
+const Dropdown = ({ superheroData, handleSuperheroChange, disableSuperhero1, disableSuperhero2, handleBattleChange, chosenBattle, disableBattle }) => {
 
   return (
     <form action="">
@@ -13,7 +13,7 @@ const Dropdown = ({ superheroData, handleSuperheroChange, disableSuperhero1, dis
         <SelectHeroes superheroData={superheroData} handleChange={handleSuperheroChange} disabled={disableSuperhero2} />
       </div>
       <div className="Dropdown-battleContainer">
-        <BattleCondition handleChange={handleBattleChange} chosenBattle={chosenBattle} />
+        <BattleCondition handleChange={handleBattleChange} chosenBattle={chosenBattle} disableBattle={disableBattle} />
       </div>
     </form>
   )
