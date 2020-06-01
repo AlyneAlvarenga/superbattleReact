@@ -2,6 +2,9 @@ import React from 'react';
 import { NativeSelect } from '@material-ui/core';
 import { FormControl } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { MdArrowUpward } from 'react-icons/md';
+import { IconContext } from "react-icons";
+import './SelectHeroes.css';
 
 const SelectHeroes = (props) => {
   const styles = {
@@ -37,18 +40,30 @@ const SelectHeroes = (props) => {
   const classes = useStyles();
 
   return (
-    <FormControl variant="outlined">
-      <NativeSelect style={styles} name="" onChange={props.handleChange} disabled={props.disabled ? true : null} className={classes.select} classes={{
-        icon: classes.icon
-      }}>
-          <option value="">Choose Your Champion</option>
-        {
-          props.superheroData.map(obj => {
-            return <option key={obj.id} value={obj.id}>{obj.name}</option>
-          })
-        }
-      </NativeSelect>
-    </FormControl>
+    <div className="SelectHeroes-container">
+      <FormControl variant="outlined">
+        <NativeSelect style={styles} name="" onChange={props.handleChange} disabled={props.disabled ? true : null} className={classes.select} classes={{
+          icon: classes.icon
+        }}>
+            <option value="">Choose Your Champion</option>
+          {
+            props.superheroData.map(obj => {
+              return <option key={obj.id} value={obj.id}>{obj.name}</option>
+            })
+          }
+        </NativeSelect>
+      </FormControl>
+      {
+        props.disabled 
+          ? null
+          : 
+          <div>
+            <IconContext.Provider value={{ className: "arrow"}}>
+              <MdArrowUpward />
+            </IconContext.Provider>
+          </div>
+      }
+    </div>
   )
 }
 

@@ -2,6 +2,9 @@ import React from 'react';
 import { NativeSelect } from '@material-ui/core';
 import { FormControl } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { MdArrowUpward } from 'react-icons/md';
+import { IconContext } from "react-icons";
+import './BattleCondition.css';
 
 const BattleCondition = ({handleChange, disableBattle}) => {
   const styles = {
@@ -37,18 +40,30 @@ const BattleCondition = ({handleChange, disableBattle}) => {
   const classes = useStyles();
 
   return (
-    <FormControl variant="filled" >
-      <NativeSelect style={styles} name="" id="" onChange={handleChange} className={classes.select} classes={{
-        icon: classes.icon
-      }} disabled={disableBattle}>
-        <option value="">Battle Condition</option>
-        <option value="intelligence">Battle of Intelligence</option>
-        <option value="speed">Battle of Speed</option>
-        <option value="combat">Battle of Combat</option>
-        <option value="strength">Battle of Strength</option>
-        <option value="power">Battle of Power</option>
-      </NativeSelect>
-    </FormControl>
+    <div className="BattleCondition-container">
+      <FormControl variant="filled" >
+        <NativeSelect style={styles} name="" id="" onChange={handleChange} className={classes.select} classes={{
+          icon: classes.icon
+        }} disabled={disableBattle}>
+          <option value="">Battle Condition</option>
+          <option value="intelligence">Battle of Intelligence</option>
+          <option value="speed">Battle of Speed</option>
+          <option value="combat">Battle of Combat</option>
+          <option value="strength">Battle of Strength</option>
+          <option value="power">Battle of Power</option>
+        </NativeSelect>
+      </FormControl>
+      {
+        disableBattle
+          ? null
+          :
+          <div>
+            <IconContext.Provider value={{ className: "arrow" }}>
+              <MdArrowUpward />
+            </IconContext.Provider>
+          </div>
+      }
+    </div>
   )
 }
 

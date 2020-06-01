@@ -87,3 +87,11 @@ button:hover, button:focus {
   border: 2px solid white;
   border-radius: 2rem;
 }
+
+.arrow {
+  position: absolute;
+  top: 5rem;
+  left: 9rem;
+  font-size: 4rem;
+  color: gold;
+}
