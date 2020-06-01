@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88d581088f6aaa94dc0ce9a34cf2a49c",
+    "revision": "cfb838d584ad2805146a365a0f1af2ca",
     "url": "/superbattleReact/index.html"
   },
   {
-    "revision": "59dff539b60d71c9e3ec",
+    "revision": "f1692b65cb562f99f27a",
     "url": "/superbattleReact/static/css/main.7cc4c9cd.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/superbattleReact/static/js/2.b28bd36e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "59dff539b60d71c9e3ec",
-    "url": "/superbattleReact/static/js/main.455bc60b.chunk.js"
+    "revision": "f1692b65cb562f99f27a",
+    "url": "/superbattleReact/static/js/main.d880260e.chunk.js"
   },
   {
     "revision": "5e7ae31da8ab4ebee014",
