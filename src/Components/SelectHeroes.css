@@ -4,3 +4,9 @@
   align-items: center;
   position: relative;
 }
+
+@media (max-width: 880px) {
+  .SelectHeroes-container {
+    padding: 0 2rem;
+  }
+}

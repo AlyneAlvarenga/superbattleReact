@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import { Modal } from '@material-ui/core';
 import './ModalComp.css';
 
-const ModalComp = () => {
-  console.log('mounted');
-  
+const ModalComp = () => {  
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {

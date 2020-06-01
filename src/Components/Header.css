@@ -13,3 +13,18 @@ header {
 .Header-results {
   min-height: 15vh;
 }
+
+@media (max-width: 770px) {
+  .Header-main {
+    justify-content: space-evenly;
+    min-height: 240px;
+  }
+
+  .Header-main button {
+    margin-top: 2rem;
+  }
+
+  .Header-results {
+    min-height: 200px;
+  }
+}

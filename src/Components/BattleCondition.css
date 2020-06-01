@@ -1,3 +1,10 @@
 .BattleCondition-container {
   position: relative;
 }
+
+@media (max-width: 770px) {
+  .BattleCondition-container {
+    /* padding-top: 15rem; */
+    transform: translateY(15rem);
+  }
+}

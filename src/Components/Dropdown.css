@@ -14,3 +14,17 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 880px) {
+  .Dropdown-heroesContainer {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 770px) {
+  .Dropdown-heroesContainer {
+    flex-direction: column;
+    min-height: 630px;
+    padding-top: 13rem;
+  }
+}
